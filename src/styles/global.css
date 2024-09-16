@@ -1,0 +1,90 @@
+*,
+:after,
+:before {
+  font-size: 100%;
+  font: inherit;
+  background-color: no-repeat;
+  box-sizing: border-box;
+  margin: 0;
+}
+:where(:root) {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  cursor: default;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+:where(a) {
+  color: inherit;
+  text-decoration: inherit;
+  background-color: transparent;
+}
+:where(body) {
+  margin: 0;
+}
+:where(h1, h2, h3, h4, h5, h6) {
+  word-break: keep-all;
+}
+:where(h1) {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.1875;
+}
+:where(h2) {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.25;
+}
+:where(h3) {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.3125;
+}
+:where(h4) {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.25;
+}
+:where(h5) {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+:where(h6) {
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+:where(dl, ol, ul) :where(dl, ol, ul) {
+  margin: 0;
+}
+:where(hr) {
+  color: inherit;
+  height: 0;
+}
+:where(nav) :where(ol, ul) {
+  list-style-type: none;
+  padding: 0;
+}
+:where(nav li):before {
+  content: "\200B";
+  float: left;
+}
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+  text-indent: 0;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  /* font-family: ; */
+  width: 100%;
+  overflow-x: hidden;
+}
