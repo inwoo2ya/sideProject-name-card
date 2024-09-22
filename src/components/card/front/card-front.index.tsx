@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
 import { StyledCardFront } from "./card-front.styles";
-import { info } from "console";
 import { companyInfo } from "./card-front.constant";
 
 const CardFront = () => {
@@ -25,12 +23,12 @@ const CardFront = () => {
       <StyledCardFront.Info>
         <div className="title">
           {companyInfo.map(({ title }) => (
-            <p>{title}</p>
+            <p key={title}>{title}</p>
           ))}
         </div>
         <div className="contents">
           {companyInfo.map(({ detail }) => (
-            <p>{detail}</p>
+            <p key={detail}>{detail}</p>
           ))}
         </div>
       </StyledCardFront.Info>
