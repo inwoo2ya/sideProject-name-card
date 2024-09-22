@@ -5,7 +5,12 @@ const CardFront = () => {
   return (
     <StyledCardFront.Root>
       <StyledCardFront.Header>
-        <img src="/lavarwave-logo.webp" width={174} height={75} alt="logo" />
+        <img
+          src="/img/lavarwave-logo.webp"
+          width={174}
+          height={75}
+          alt="logo"
+        />
         <a href="https://lavarwave.co.kr/" target="_blank" rel="noreferrer">
           www.lavarwave.co.kr
         </a>
