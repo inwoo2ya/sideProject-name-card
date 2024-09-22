@@ -30,7 +30,7 @@ const Body = styled.section({
     fontSize: "1.25rem",
   },
   p: {
-    fontSize: "0.75rem",
+    fontSize: "1rem",
   },
   h2: { letterSpacing: "0.5rem", fontSize: "2.75rem", marginRight: "-0.5rem" },
   "& > div": {
