@@ -11,7 +11,12 @@ const CardFront = () => {
           height={75}
           alt="logo"
         />
-        <a href="https://lavarwave.co.kr/" target="_blank" rel="noreferrer">
+        <a
+          onClick={e => e.stopPropagation()}
+          href="https://lavarwave.co.kr/"
+          target="_blank"
+          rel="noreferrer"
+        >
           www.lavarwave.co.kr
         </a>
       </StyledCardFront.Header>
