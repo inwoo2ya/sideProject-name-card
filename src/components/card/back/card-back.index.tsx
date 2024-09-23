@@ -8,7 +8,12 @@ const CardBack = () => {
       <div>
         {contents.map(({ title, detail, img }) => (
           <StyledCardBack.Content key={title}>
-            <a href={detail} target="_blank" rel="noreferrer">
+            <a
+              href={detail}
+              target="_blank"
+              rel="noreferrer"
+              onClick={e => e.stopPropagation()}
+            >
               <img src={img} alt={title} />
             </a>
           </StyledCardBack.Content>

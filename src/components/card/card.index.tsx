@@ -7,10 +7,13 @@ import { isMobile } from "react-device-detect";
 
 const Card = () => {
   const [isVisible, setIsVisible] = useState(false);
-
+  console.log(isMobile);
   return (
     <>
-      <CardWrap>
+      <CardWrap
+        isMobile={isMobile}
+        onClick={isMobile ? () => setIsVisible(!isVisible) : () => {}}
+      >
         <StyledCard isVisible={isVisible}>
           <CardBack /> <CardFront />
         </StyledCard>

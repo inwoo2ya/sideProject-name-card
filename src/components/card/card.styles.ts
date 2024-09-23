@@ -14,11 +14,13 @@ export const StyledCard = styled("div", {
   transformStyle: "preserve-3d",
   transform: isVisible ? "rotateY(180deg)" : "rotateY(0deg)",
 }));
-export const CardWrap = styled.div({
+export const CardWrap = styled("div", {
+  shouldForwardProp: prop => !["isMobile"].includes(prop.toString()),
+})<{ isMobile: boolean }>(({ isMobile }) => ({
   width: "787.5px",
   height: "437.5px",
   perspective: "1200px",
-});
+}));
 export const Button = styled.button({
   backgroundColor: "white",
   position: "absolute",
