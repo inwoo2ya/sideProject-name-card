@@ -9,6 +9,7 @@ const Root = styled.div({
   display: "flex",
   flexDirection: "column",
   gap: "0.375rem",
+  backgroundColor: "white",
 });
 // #DB1F29
 const Header = styled.section({

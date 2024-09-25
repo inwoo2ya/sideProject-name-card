@@ -32,4 +32,19 @@ const Content = styled.div({
     },
   },
 });
-export const StyledCardBack = { Root, Content };
+const Download = styled.button({
+  backgroundColor: "inherit",
+  border: "none",
+  cursor: "pointer",
+  svg: {
+    width: "50px",
+    height: "50px",
+    fill: "rgba(0, 0, 0, 0.7)",
+  },
+  ":hover": {
+    svg: {
+      fill: "rgba(0,0,0,0.5)",
+    },
+  },
+});
+export const StyledCardBack = { Root, Content, Download };

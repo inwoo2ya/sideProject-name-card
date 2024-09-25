@@ -1,13 +1,18 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import CardBack from "./back/card-back.index";
 import { Button, CardWrap, StyledCard } from "./card.styles";
 import CardFront from "./front/card-front.index";
 import { HiArrowUturnLeft } from "react-icons/hi2";
 import { isMobile } from "react-device-detect";
-
+import domtoimage from "dom-to-image";
+import { saveAs } from "file-saver";
 const Card = () => {
   const [isVisible, setIsVisible] = useState(false);
-  console.log(isMobile);
+  const clickHandler = () => {
+    domtoimage.toBlob(document.querySelector(".front") as Node).then(blob => {
+      saveAs(blob, "라바웨이브_이인우_명함.png");
+    });
+  };
   return (
     <>
       <CardWrap
@@ -15,7 +20,8 @@ const Card = () => {
         onClick={isMobile ? () => setIsVisible(!isVisible) : () => {}}
       >
         <StyledCard isVisible={isVisible}>
-          <CardBack /> <CardFront />
+          <CardBack className="back" onClick={clickHandler} />
+          <CardFront className="front" />
         </StyledCard>
       </CardWrap>
       {!isMobile && (
