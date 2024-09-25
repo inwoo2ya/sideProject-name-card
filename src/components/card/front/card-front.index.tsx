@@ -1,9 +1,10 @@
 import { StyledCardFront } from "./card-front.styles";
 import { companyInfo } from "./card-front.constant";
+import { RefObject } from "react";
 
-const CardFront = () => {
+const CardFront = (props: React.HTMLAttributes<HTMLDivElement>) => {
   return (
-    <StyledCardFront.Root>
+    <StyledCardFront.Root {...props}>
       <StyledCardFront.Header>
         <img
           src="/img/lavarwave-logo.webp"

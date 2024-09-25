@@ -1,9 +1,16 @@
+import { Ref } from "react";
 import { contents } from "./card-back.constant";
 import { StyledCardBack } from "./card-back.styles";
+import { AiOutlineDownload } from "react-icons/ai";
 
-const CardBack = () => {
+const CardBack = ({
+  onClick,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement> & {
+  onClick?: () => void;
+}) => {
   return (
-    <StyledCardBack.Root>
+    <StyledCardBack.Root {...props}>
       <p>Follow Me</p>
       <div>
         {contents.map(({ title, detail, img }) => (
@@ -19,6 +26,9 @@ const CardBack = () => {
           </StyledCardBack.Content>
         ))}
       </div>
+      <StyledCardBack.Download onClick={onClick}>
+        <AiOutlineDownload />
+      </StyledCardBack.Download>
     </StyledCardBack.Root>
   );
 };
