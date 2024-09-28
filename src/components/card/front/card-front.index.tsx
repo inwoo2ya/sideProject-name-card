@@ -25,23 +25,23 @@ const CardFront = (props: React.HTMLAttributes<HTMLDivElement>) => {
         <h6>㈜라바웨이브</h6>
         <div>
           <div>
-            <h6>서비스 개발팀</h6>
+            <h5>서비스 개발팀</h5>
             <p>Front-End 개발</p>
           </div>
           <h2>이인우</h2>
         </div>
       </StyledCardFront.Body>
       <StyledCardFront.Info>
-        <div className="title">
-          {companyInfo.map(({ title }) => (
-            <p key={title}>{title}</p>
-          ))}
-        </div>
-        <div className="contents">
-          {companyInfo.map(({ detail }) => (
-            <p key={detail}>{detail}</p>
-          ))}
-        </div>
+        {companyInfo.map(({ title, detail }) => (
+          <div key={title}>
+            <div className="title">
+              <p>{title}</p>
+            </div>
+            <div className="contents">
+              <p>{typeof detail === "string" ? detail : detail.join(" / ")}</p>
+            </div>
+          </div>
+        ))}
       </StyledCardFront.Info>
     </StyledCardFront.Root>
   );

@@ -9,7 +9,7 @@ export const companyInfo = [
   },
   {
     title: "E-mail",
-    detail: "liw0627@lavarwave.co.kr / dldlsdn0987@naver.com",
+    detail: ["liw0627@lavarwave.co.kr", "dldlsdn0987@naver.com"],
   },
   {
     title: "Address",

@@ -1,8 +1,10 @@
 import styled from "@emotion/styled";
+import { mediaQuery } from "styles/style";
 
 export const StyledCard = styled("div", {
   shouldForwardProp: prop => !["isVisible"].includes(prop.toString()),
 })<{ isVisible: boolean }>(({ isVisible }) => ({
+  overflow: "visible",
   display: "flex",
   position: "relative",
   width: "100%",
@@ -17,8 +19,14 @@ export const StyledCard = styled("div", {
 export const CardWrap = styled("div", {
   shouldForwardProp: prop => !["isMobile"].includes(prop.toString()),
 })<{ isMobile: boolean }>(({ isMobile }) => ({
-  width: "787.5px",
-  height: "437.5px",
+  width: "100vw",
+  maxWidth: "375px",
+  height: "100vh",
+  maxHeight: "667px",
+  ...mediaQuery("sm", {
+    maxWidth: "787.5px",
+    maxHeight: "437.5px",
+  }),
   perspective: "1200px",
 }));
 export const Button = styled.button({
