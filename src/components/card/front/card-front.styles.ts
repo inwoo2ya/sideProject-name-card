@@ -9,11 +9,11 @@ const Root = styled.div({
   height: "100%",
   display: "flex",
   flexDirection: "column",
-  gap: "0.375rem",
   backgroundColor: "white",
   justifyContent: "space-between",
   ...mediaQuery("sm", {
     justifyContent: "end",
+    gap: "0.375rem",
   }),
 });
 // #DB1F29
