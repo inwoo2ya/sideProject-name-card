@@ -14,7 +14,6 @@ const Root = styled.div({
   ...mediaQuery("sm", {
     justifyContent: "end",
     gap: "0.375rem",
-    height: "auto",
   }),
 });
 // #DB1F29
