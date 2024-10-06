@@ -6,7 +6,6 @@
   background-color: no-repeat;
   box-sizing: border-box;
   margin: 0;
-  font-family: "lavarwave";
 }
 :where(:root) {
   -webkit-tap-highlight-color: transparent;
@@ -88,7 +87,7 @@ body,
   height: 100%;
 }
 body {
-  /* font-family: ; */
+  font-family: Lavarwave;
   width: 100%;
   overflow-x: hidden;
 }
