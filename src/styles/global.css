@@ -1,3 +1,5 @@
+@import url("./font.css");
+
 *,
 :after,
 :before {
@@ -81,13 +83,13 @@
 html,
 body,
 #root {
+  font-family: Lavarwave;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
 body {
-  font-family: Lavarwave;
   width: 100%;
   overflow-x: hidden;
 }
